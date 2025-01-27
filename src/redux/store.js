@@ -1,6 +1,6 @@
 import onboardingStudentsSlice from "./slices/onboardingStudentsSlice";
 
-const { configureStore } = require("@reduxjs/toolkit");
+import { configureStore } from "@reduxjs/toolkit";
 
 //create a store and give it slices
 export const store = configureStore({
