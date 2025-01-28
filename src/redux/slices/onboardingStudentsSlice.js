@@ -1,7 +1,9 @@
 // Create a slice
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const { createSlice } = require("@reduxjs/toolkit");
+// // eslint-disable-next-line @typescript-eslint/no-require-imports
+// const { createSlice } = require("@reduxjs/toolkit");
+
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   currentStep: 1,
@@ -22,6 +24,6 @@ const onboardingStudentsSlice = createSlice({
     },
   },
 });
-export const { setCurrentStep, updateFormData } =
+export const { setCurrentStep, updateFormData} =
   onboardingStudentsSlice.actions;
 export default onboardingStudentsSlice.reducer;

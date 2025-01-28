@@ -57,9 +57,9 @@ export default function PersonalInfoForm() {
     // console.log(data);
   }
   return (
-    <form className="px-12 py-4" onSubmit={handleSubmit(processData)}>
+    <form className="sm:px-12 px-3 py-4" onSubmit={handleSubmit(processData)}>
       <div className="mb-8">
-        <h5 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
+        <h5 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white">
           Personal info
         </h5>
         <p>Please provide your name,email address,and phone number.</p>

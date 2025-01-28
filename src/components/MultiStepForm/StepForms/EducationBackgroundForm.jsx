@@ -42,7 +42,7 @@ export default function EducationBackgroundForm() {
     // console.log(data);
   }
   return (
-    <form className="px-12 py-4" onSubmit={handleSubmit(processData)}>
+    <form className="sm:px-12 px-3 py-4" onSubmit={handleSubmit(processData)}>
       <div className="mb-8">
         <h5 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
           Education Background

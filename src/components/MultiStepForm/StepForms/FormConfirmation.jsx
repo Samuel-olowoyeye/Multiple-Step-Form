@@ -1,6 +1,9 @@
 import NavButtons from "@/components/FormInputs/NavButtons";
 import React from "react";
-import { useSelector } from "react-redux";
+import toast from "react-hot-toast";
+import { useSelector} from "react-redux";
+
+
 
 export default function FormConfirmation() {
   const formData = useSelector((store) => store.onboarding.formData);
@@ -34,14 +37,20 @@ export default function FormConfirmation() {
     );
   };
 
-  async function processData(e) {
-    e.preventDefault();
-    console.log(formData);
+  // Handle form submission
+    async function processData(e) {
+      e.preventDefault();
+      console.log(formData);
+
+    // Display the toast message and reset the form after it
+    toast.success("Congratulations! Form submitted successfully!", {
+      duration: 3000, // Optional: Set duration
+    });
   }
 
   return (
     <div>
-      <form className="px-12 py-4" onSubmit={processData}>
+      <form className="sm:px-12 px-3 py-4" onSubmit={processData}>
         <div className="mb-8">
           <h5 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
             Review Information
